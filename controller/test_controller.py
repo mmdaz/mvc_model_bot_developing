@@ -35,7 +35,7 @@ class TestController:
         return ConversationHandler.END
 
     def __process_handlers(self):
-        conversation_handler = ConversationHandler(entry_points=[CommandHandler("/start", self.main_menu)],
+        conversation_handler = ConversationHandler(entry_points=[CommandHandler("start", self.main_menu)],
                                                    states={
                                                        self.states_dict["step_1"]: [
                                                            MessageHandler(Filters.text, self.final_step)],
